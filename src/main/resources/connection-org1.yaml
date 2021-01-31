@@ -1,0 +1,257 @@
+---
+name: whrcbank-network-org1
+version: 1.0.0
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+      - peer0.org1.whrcbank.com
+      - peer1.org1.whrcbank.com
+peers:
+  peer0.org1.whrcbank.com:
+    url: grpcs://peer0.org1.whrcbank.com:7051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICXDCCAgKgAwIBAgIRAOaiqSVO9GvdlHMnLGij2h8wCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzEud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmcxLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmcxLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMS53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAAQBShyZ8qTvDiOJvj2mFAjQmnhRyLCxZeqH3324J6iUyupFJBIL
+        HRYe4ljnvfV5m0DGcQwwtgZes3D0qnPCcDw+o20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIE1x0YBzlFK1VLe8XG12AlgUZN6ov9COZ8eL8r1EN7siMAoGCCqG
+        SM49BAMCA0gAMEUCIQD91GJy4w4mKXgF5+WeE5tVlUf5I163LyaVqF+aaUPJQQIg
+        boyOgUrh1z7gewU8Rrf1ZprgwTJk8gaVEItXtR42EFg=
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer0.org1.whrcbank.com
+      hostnameOverride: peer0.org1.whrcbank.com
+  peer1.org1.whrcbank.com:
+    url: grpcs://peer1.org1.whrcbank.com:7151
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICXDCCAgKgAwIBAgIRAOaiqSVO9GvdlHMnLGij2h8wCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzEud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmcxLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmcxLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMS53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAAQBShyZ8qTvDiOJvj2mFAjQmnhRyLCxZeqH3324J6iUyupFJBIL
+        HRYe4ljnvfV5m0DGcQwwtgZes3D0qnPCcDw+o20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIE1x0YBzlFK1VLe8XG12AlgUZN6ov9COZ8eL8r1EN7siMAoGCCqG
+        SM49BAMCA0gAMEUCIQD91GJy4w4mKXgF5+WeE5tVlUf5I163LyaVqF+aaUPJQQIg
+        boyOgUrh1z7gewU8Rrf1ZprgwTJk8gaVEItXtR42EFg=
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer1.org1.whrcbank.com
+      hostnameOverride: peer1.org1.whrcbank.com
+  peer0.org2.whrcbank.com:
+    url: grpcs://peer0.org2.whrcbank.com:8051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICXDCCAgKgAwIBAgIRAIrnHiSOVqzN1QOQ0G0KpCMwCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzIud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmcyLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmcyLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMi53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAASSyVJzGbOloWsqgZh8r9R/28DDYygBGLW5jiGK39fGYhBY49qB
+        hA9Ih4sPdokbUMrjw8QtKvWvlset3YZ+dZ80o20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIDH07TBH2da9BTPUPNJVeMwtaNRMytLz3IVpQmjoUYtRMAoGCCqG
+        SM49BAMCA0gAMEUCIQD0PHt9ygQ1xvx3Ew8yLTVsxVrQUVHUHlnd6Sxa1MvAmgIg
+        TUOmGLHWJkMBLy6CLmAVBgygPOW4nT4YXRSkBFlUwOY=
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer0.org2.whrcbank.com
+      hostnameOverride: peer0.org2.whrcbank.com
+  peer1.org2.whrcbank.com:
+    url: grpcs://peer1.org2.whrcbank.com:8151
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICXDCCAgKgAwIBAgIRAIrnHiSOVqzN1QOQ0G0KpCMwCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzIud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmcyLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmcyLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMi53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAASSyVJzGbOloWsqgZh8r9R/28DDYygBGLW5jiGK39fGYhBY49qB
+        hA9Ih4sPdokbUMrjw8QtKvWvlset3YZ+dZ80o20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIDH07TBH2da9BTPUPNJVeMwtaNRMytLz3IVpQmjoUYtRMAoGCCqG
+        SM49BAMCA0gAMEUCIQD0PHt9ygQ1xvx3Ew8yLTVsxVrQUVHUHlnd6Sxa1MvAmgIg
+        TUOmGLHWJkMBLy6CLmAVBgygPOW4nT4YXRSkBFlUwOY=
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer1.org2.whrcbank.com
+      hostnameOverride: peer1.org2.whrcbank.com
+  peer0.org3.whrcbank.com:
+    url: grpcs://peer0.org3.whrcbank.com:9051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICWzCCAgKgAwIBAgIRAL8TfM7x7mLVfj5FkBpedDswCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzMud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmczLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmczLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMy53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAAS2HpIV6Gew13Ppr23QBZ54mJRoDylZ+kU029x7hhgGWmqKo9Ok
+        vFsLBkE6C1qFeOIl8jQVLwaerLzF/ByeWQkGo20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIM61JBi1icEEZzaczbVOz9VdoCTiTNKybYw56sQFbMh8MAoGCCqG
+        SM49BAMCA0cAMEQCIHpckKqZFDcM6Rgw1b1bi1bDcx1cWp8IjbEJOUZuVKjuAiAr
+        11+C2B+SbQixq1LYHa1/pP001BHvp6EddGUB+nCuqQ==
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer0.org3.whrcbank.com
+      hostnameOverride: peer0.org3.whrcbank.com
+  peer1.org3.whrcbank.com:
+    url: grpcs://peer1.org3.whrcbank.com:9151
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICWzCCAgKgAwIBAgIRAL8TfM7x7mLVfj5FkBpedDswCgYIKoZIzj0EAwIweDEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGjAYBgNVBAoTEW9yZzMud2hyY2JhbmsuY29tMSAwHgYDVQQDExd0
+        bHNjYS5vcmczLndocmNiYW5rLmNvbTAeFw0yMDEwMDUwNjMzMDBaFw0zMDEwMDMw
+        NjMzMDBaMHgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYD
+        VQQHEw1TYW4gRnJhbmNpc2NvMRowGAYDVQQKExFvcmczLndocmNiYW5rLmNvbTEg
+        MB4GA1UEAxMXdGxzY2Eub3JnMy53aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggq
+        hkjOPQMBBwNCAAS2HpIV6Gew13Ppr23QBZ54mJRoDylZ+kU029x7hhgGWmqKo9Ok
+        vFsLBkE6C1qFeOIl8jQVLwaerLzF/ByeWQkGo20wazAOBgNVHQ8BAf8EBAMCAaYw
+        HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8w
+        KQYDVR0OBCIEIM61JBi1icEEZzaczbVOz9VdoCTiTNKybYw56sQFbMh8MAoGCCqG
+        SM49BAMCA0cAMEQCIHpckKqZFDcM6Rgw1b1bi1bDcx1cWp8IjbEJOUZuVKjuAiAr
+        11+C2B+SbQixq1LYHa1/pP001BHvp6EddGUB+nCuqQ==
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer1.org3.whrcbank.com
+      hostnameOverride: peer1.org3.whrcbank.com
+
+orderers:
+  orderer1.whrcbank.com:
+    url: grpcs://orderer1.whrcbank.com:7050
+    grpcOptions:
+      ssl-target-name-override: orderer1.whrcbank.com
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICRjCCAe2gAwIBAgIQe/s3fYaoD4g/bcCPLofPvDAKBggqhkjOPQQDAjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wHhcNMjAxMDA1MDYzMzAwWhcNMzAxMDAzMDYzMzAwWjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATYKLUtuiTQF0NE
+        jTbG6KMROz3qtE691iBymhdyI+OTfGPrFbZ65QVFTIUV/AUO4+sri5z/kg1M+B/m
+        moDCsJmNo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+        CCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIJc7BIlv0yPJQ92o
+        wGajBxNRvZKi2Ln4fDvc+6EGeiyuMAoGCCqGSM49BAMCA0cAMEQCIHZ5YK9cGoMy
+        msd3XsiVIs/EcsMstQPzvfa38hmGQ3J8AiBu4LEAvtQjMKJqtuP96pFf13As7loF
+        qbPphMFS55qrfw==
+        -----END CERTIFICATE-----
+  orderer2.whrcbank.com:
+    url: grpcs://orderer2.whrcbank.com:8050
+    grpcOptions:
+      ssl-target-name-override: orderer2.whrcbank.com
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICRjCCAe2gAwIBAgIQe/s3fYaoD4g/bcCPLofPvDAKBggqhkjOPQQDAjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wHhcNMjAxMDA1MDYzMzAwWhcNMzAxMDAzMDYzMzAwWjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATYKLUtuiTQF0NE
+        jTbG6KMROz3qtE691iBymhdyI+OTfGPrFbZ65QVFTIUV/AUO4+sri5z/kg1M+B/m
+        moDCsJmNo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+        CCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIJc7BIlv0yPJQ92o
+        wGajBxNRvZKi2Ln4fDvc+6EGeiyuMAoGCCqGSM49BAMCA0cAMEQCIHZ5YK9cGoMy
+        msd3XsiVIs/EcsMstQPzvfa38hmGQ3J8AiBu4LEAvtQjMKJqtuP96pFf13As7loF
+        qbPphMFS55qrfw==
+        -----END CERTIFICATE-----
+  orderer3.whrcbank.com:
+    url: grpcs://orderer3.whrcbank.com:9050
+    grpcOptions:
+      ssl-target-name-override: orderer9.whrcbank.com
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICRjCCAe2gAwIBAgIQe/s3fYaoD4g/bcCPLofPvDAKBggqhkjOPQQDAjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wHhcNMjAxMDA1MDYzMzAwWhcNMzAxMDAzMDYzMzAwWjBuMQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEVMBMGA1UEChMMd2hyY2JhbmsuY29tMRswGQYDVQQDExJ0bHNjYS53
+        aHJjYmFuay5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATYKLUtuiTQF0NE
+        jTbG6KMROz3qtE691iBymhdyI+OTfGPrFbZ65QVFTIUV/AUO4+sri5z/kg1M+B/m
+        moDCsJmNo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+        CCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIJc7BIlv0yPJQ92o
+        wGajBxNRvZKi2Ln4fDvc+6EGeiyuMAoGCCqGSM49BAMCA0cAMEQCIHZ5YK9cGoMy
+        msd3XsiVIs/EcsMstQPzvfa38hmGQ3J8AiBu4LEAvtQjMKJqtuP96pFf13As7loF
+        qbPphMFS55qrfw==
+        -----END CERTIFICATE-----
+
+channels:
+  mychannel:
+    orderers:
+      - orderer1.whrcbank.com
+      - orderer2.whrcbank.com
+      - orderer3.whrcbank.com
+    peers:
+      peer0.org1.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: false
+        discover: true
+      peer1.org1.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+        discover: true
+      peer0.org2.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+        discover: true
+      peer1.org2.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+        discover: true
+      peer0.org3.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+        discover: true
+      peer1.org3.whrcbank.com:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+        discover: true
